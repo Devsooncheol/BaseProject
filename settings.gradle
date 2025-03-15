@@ -1,0 +1,43 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = new File(settings.rootDir, "local.properties")  // 수정된 부분
+
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+
+def githubUsername = localProperties.getProperty("GITHUB_USERNAME", "")
+def githubToken = localProperties.getProperty("GITHUB_TOKEN", "")
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io'
+            credentials {
+                username = githubUsername
+                password = githubToken
+            }
+        }
+    }
+}
+
+rootProject.name = "baseProject"
+include(":app")
+
+include ':BaseModule'
+project(':BaseModule').projectDir = new File("/Volumes/DATA/2.project/4.BaseModule/app")
