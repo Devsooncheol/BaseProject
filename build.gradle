@@ -11,7 +11,13 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://jitpack.io'
+            credentials {
+                username = project.findProperty("GITHUB_USERNAME") as String ?: ""
+                password = project.findProperty("GITHUB_TOKEN") as String ?: ""
+            }
+        }
         flatDir {
             dirs 'libs'
         }
