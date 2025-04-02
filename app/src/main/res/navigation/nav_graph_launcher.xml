@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launcherFragment">
+
+    <fragment
+        android:id="@+id/launcherFragment"
+        android:name="com.base.baseproject.ui.launcher.LauncherFragment"
+        android:label="LauncherFragment">
+
+        <action
+            android:id="@+id/action_launcherFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+
+
+
+
+<!--        <action-->
+<!--            android:id="@+id/action_launcherFragment_to_accountServerSettingLauncherFragment"-->
+<!--            app:destination="@+id/accountServerSettingLauncherFragment" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_global_permissionLauncherFragment"-->
+<!--            app:destination="@id/permissionLauncherFragment" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_launcherFragment_to_login_graph"-->
+<!--            app:destination="@id/login_graph"-->
+<!--            app:enterAnim="@android:anim/fade_in"-->
+<!--            app:exitAnim="@android:anim/fade_out"-->
+<!--            app:popUpTo="@id/launcherFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.base.baseproject.ui.launcher.LoginFragment"
+        android:label="LoginFragment">
+
+    </fragment>
+
+
+<!--    <navigation-->
+<!--        android:id="@+id/login_graph"-->
+<!--        app:startDestination="@id/loginFragment">-->
+
+<!--        <fragment-->
+<!--            android:id="@+id/loginFragment"-->
+<!--            android:name="com.isens.sens365.ui.login.LoginFragment"-->
+<!--            android:label="LoginFragment">-->
+<!--            <action-->
+<!--                android:id="@+id/action_login_Fragment_to_testDataInputFragment"-->
+<!--                app:destination="@+id/testDataInputFragment" />-->
+
+<!--            <action-->
+<!--                android:id="@+id/action_LoginFragment_to_CountryUnitFragment"-->
+<!--                app:destination="@id/countryUnitFragment"-->
+<!--                app:popUpTo="@+id/loginFragment"-->
+<!--                app:popUpToInclusive="true" />-->
+
+<!--            <action-->
+<!--                android:id="@+id/action_LoginFragment_to_RestoreWaitingFragment"-->
+<!--                app:destination="@id/restoreWaitingFragment"-->
+<!--                app:popUpTo="@+id/loginFragment"-->
+<!--                app:popUpToInclusive="true" />-->
+
+<!--            <action-->
+<!--                android:id="@+id/action_LoginFragment_to_LauncherDeveloperFragment"-->
+<!--                app:destination="@id/launcherDeveloperFragment"-->
+<!--                app:popUpTo="@+id/loginFragment"-->
+<!--                app:popUpToInclusive="true" />-->
+
+<!--        </fragment>-->
+<!--    </navigation>-->
+<!--    <include app:graph="@navigation/nav_graph_settings" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/permissionLauncherFragment"-->
+<!--        android:name="com.isens.sens365.ui.permission.PermissionLauncherFragment"-->
+<!--        android:label="PermissionLauncherFragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_permissionLauncherFragment_to_accountServerSettingLauncherFragment"-->
+<!--            app:destination="@id/accountServerSettingLauncherFragment"-->
+<!--            app:popUpTo="@+id/permissionLauncherFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+<!--    </fragment>-->
+<!--    <action-->
+<!--        android:id="@+id/action_global_permissionLauncherFragment"-->
+<!--        app:destination="@id/permissionLauncherFragment" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/accountServerSettingLauncherFragment"-->
+<!--        android:name="com.isens.sens365.ui.launcher.account.AccountServerSettingLauncherFragment"-->
+<!--        android:label="AccountServerSettingLauncherFragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_accountServerSettingLauncherFragment_to_login_graph"-->
+<!--            app:destination="@id/login_graph"-->
+<!--            app:popUpTo="@id/launcherFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_accountServerSettingLauncherFragment_to_LauncherDeveloperFragment"-->
+<!--            app:destination="@id/launcherDeveloperFragment"-->
+<!--            app:popUpTo="@id/launcherFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/accountServerSettingMainFragment"-->
+<!--        android:name="com.isens.sens365.ui.launcher.account.AccountServerSettingMainFragment"-->
+<!--        android:label="AccountServerSettingLauncherFragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_accountServerSettingMainFragment_to_nav_graph"-->
+<!--            app:destination="@id/nav_graph"-->
+<!--            app:popUpTo="@id/accountServerSettingMainFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+<!--    </fragment>-->
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/countryUnitFragment"-->
+<!--        android:name="com.isens.sens365.ui.country.CountryUnitFragment"-->
+<!--        android:label="CountryUnitFragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_CountryUnitFragment_to_RestoreWaitingFragment2"-->
+<!--            app:destination="@id/restoreWaitingFragment"-->
+<!--            app:popUpTo="@+id/countryUnitFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/restoreWaitingFragment"-->
+<!--        android:name="com.isens.sens365.ui.restore.RestoreFragment"-->
+<!--        android:label="RestoreWaitingFragment" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/launcherDeveloperFragment"-->
+<!--        android:name="com.isens.sens365.ui.launcher.developer.LauncherDeveloperFragment"-->
+<!--        android:label="LauncherDeveloperFragment">-->
+
+<!--        <argument-->
+<!--            android:name="isMain"-->
+<!--            app:argType="boolean" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_launcherDeveloperFragment_to_accountServerSettingLauncherFragment"-->
+<!--            app:destination="@id/accountServerSettingLauncherFragment"-->
+<!--            app:popUpTo="@+id/launcherDeveloperFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_launcherDeveloperFragment_to_accountServerSettingMainFragment"-->
+<!--            app:destination="@id/accountServerSettingMainFragment"-->
+<!--            app:popUpTo="@+id/launcherDeveloperFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+<!--    </fragment>-->
+
+
+</navigation>
