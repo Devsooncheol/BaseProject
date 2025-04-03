@@ -40,4 +40,9 @@ rootProject.name = "baseProject"
 include(":app")
 
 include ':BaseModule'
-project(':BaseModule').projectDir = new File("/Volumes/DATA/2.project/4.BaseModule/app")
+
+//집
+//project(':BaseModule').projectDir = new File("/Volumes/DATA/2.project/4.BaseModule/app")
+
+//회사
+project(':BaseModule').projectDir = new File("/Volumes/DATA/0.sooncheol/0.BaseModule/app")
