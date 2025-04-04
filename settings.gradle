@@ -36,13 +36,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "baseProject"
+rootProject.name = "BaseProject"
 include(":app")
 
 include ':BaseModule'
-
-//집
-//project(':BaseModule').projectDir = new File("/Volumes/DATA/2.project/4.BaseModule/app")
-
-//회사
-project(':BaseModule').projectDir = new File("/Volumes/DATA/0.sooncheol/0.BaseModule/app")
+//project(':BaseModule').projectDir = new File("/Volumes/DATA/2.project/4.BaseModule/app") // 집
+project(':BaseModule').projectDir = new File("/Volumes/DATA/0.sooncheol/0.BaseModule/app/")  //회사
