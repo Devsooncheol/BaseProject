@@ -1,4 +1,4 @@
-package com.base.baseproject
+package com.base.baseproject.ui.main
 
 import android.content.Intent
 import com.base.module.base.BaseViewModel

@@ -1,7 +1,7 @@
 package com.base.baseproject.base
 
-import com.base.baseproject.MainActivity
-import com.base.baseproject.ui.LauncherActivity
+import com.base.baseproject.ui.main.MainActivity
+import com.base.baseproject.ui.launcher.LauncherActivity
 import com.base.module.base.data.ActivityDefinition
 import com.base.module.base.scenario.BaseScenario
 import timber.log.Timber

@@ -1,14 +1,12 @@
-package com.base.baseproject.ui
+package com.base.baseproject.ui.launcher
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.base.baseproject.R
 import com.base.baseproject.base.UiScenario
 import com.base.baseproject.databinding.ActivityLauncherBinding
-import com.base.baseproject.ui.launcher.LauncherViewModel
 import com.base.module.base.BaseActivity
 import com.base.module.base.scenario.BaseScenario
 

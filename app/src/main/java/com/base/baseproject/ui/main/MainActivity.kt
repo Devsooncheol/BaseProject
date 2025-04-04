@@ -1,11 +1,8 @@
-package com.base.baseproject
+package com.base.baseproject.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import com.base.baseproject.base.UiScenario
-import com.base.baseproject.databinding.ActivityLauncherBinding
 import com.base.baseproject.databinding.ActivityMainBinding
 import com.base.module.base.BaseActivity
 import com.base.module.base.scenario.BaseScenario

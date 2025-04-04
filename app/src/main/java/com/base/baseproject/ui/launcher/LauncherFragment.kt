@@ -38,7 +38,8 @@ class LauncherFragment : Fragment() {
     private fun moveLoginFragment() {
         lifecycleScope.launch {
             delay(1000)
-            val action = LauncherFragmentDirections.actionLauncherFragmentToLoginFragment()
+
+            val action = LauncherFragmentDirections.actionLauncherFragmentToLoginGraph()
             findNavController().navigate(action)
         }
     }
