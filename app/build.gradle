@@ -69,4 +69,7 @@ dependencies {
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$rootProject.nav_version"
 
+    // Timber
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
 }
