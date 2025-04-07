@@ -5,18 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.base.baseproject.R
 import com.base.baseproject.databinding.FragmentLauncherBinding
+import com.base.module.base.BaseFragment
+import com.base.module.base.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class LauncherFragment : Fragment() {
+class LauncherFragment : BaseFragment() {
 
-    private var _binding: ViewBinding? = null
-    val binding get() = _binding!!
+    override val viewModel: LauncherViewModel by viewModels()
+
+    override fun getViewBinding(): ViewBinding {
+        return FragmentLauncherBinding.inflate(layoutInflater)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,14 +31,6 @@ class LauncherFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentLauncherBinding.inflate(layoutInflater)
-        return binding.root
     }
 
     private fun moveLoginFragment() {
