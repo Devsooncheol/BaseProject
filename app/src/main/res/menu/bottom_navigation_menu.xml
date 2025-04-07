@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/selector_home"
+        android:title="@string/bottom_navigation_home" />
+
+    <item
+        android:id="@+id/nav_graph_settings"
+        android:icon="@drawable/selector_settings"
+        android:title="@string/bottom_navigation_settings" />
+</menu>

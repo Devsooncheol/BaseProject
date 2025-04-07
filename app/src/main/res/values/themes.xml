@@ -27,6 +27,29 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="bottomNaviTextActive" parent="textStyleDetail2"></style>
+
+    <style name="bottomNaviTextInactive" parent="textStyleDetail1"></style>
+
+    <style name="baseText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/selector_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="textStyleDetail1" parent="baseText">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="textStyleDetail2" parent="baseText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <style name="toolBar" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:layout_width">match_parent</item>

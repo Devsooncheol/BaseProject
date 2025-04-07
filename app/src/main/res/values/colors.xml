@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="default_bg">@color/white</color>
     <color name="blue_100">#0f6ad5</color>
     <color name="blue_gray_50">#5477a1</color>
     <color name="text">#171717</color>
+    <color name="text_disabled">#CCCCCC</color>
 </resources>
