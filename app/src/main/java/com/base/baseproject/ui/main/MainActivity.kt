@@ -16,8 +16,6 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     override val viewModel: MainViewModel by viewModels()
 
-    private lateinit var navController: NavController
-
     override fun getUiScenario(): BaseScenario {
         return UiScenario
     }
@@ -27,12 +25,5 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-
-        navController = navHostFragment.navController
-        val navGraph = navController.navInflater.inflate(R.navigation.nav_graph_main)
-        navController.graph = navGraph
-
     }
 }
