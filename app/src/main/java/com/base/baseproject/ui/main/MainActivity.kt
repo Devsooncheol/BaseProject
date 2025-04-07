@@ -2,6 +2,8 @@ package com.base.baseproject.ui.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.base.baseproject.R
@@ -9,6 +11,8 @@ import com.base.baseproject.base.UiScenario
 import com.base.baseproject.databinding.ActivityMainBinding
 import com.base.module.base.BaseActivity
 import com.base.module.base.scenario.BaseScenario
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : BaseActivity<MainViewModel>() {
     private var _binding: ActivityMainBinding? = null
@@ -25,5 +29,12 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // 샘플 (아래 코드 삭제 예정)
+        lifecycleScope.launch{
+            delay(1000)
+            viewModel.isWithOutLauncherFragment = true
+            moveToFirstActivity ()
+        }
     }
 }

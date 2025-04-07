@@ -8,6 +8,7 @@ import com.base.baseproject.R
 import com.base.baseproject.base.UiScenario
 import com.base.baseproject.databinding.ActivityLauncherBinding
 import com.base.module.base.BaseActivity
+import com.base.module.base.constants.BaseConstants
 import com.base.module.base.scenario.BaseScenario
 
 class LauncherActivity : BaseActivity<LauncherViewModel>() {
@@ -33,6 +34,14 @@ class LauncherActivity : BaseActivity<LauncherViewModel>() {
 
         navController = navHostFragment.navController
         val navGraph = navController.navInflater.inflate(R.navigation.nav_graph_launcher)
+
+        val startDest = if(!intent.getBooleanExtra(BaseConstants.INTENT_EXTRA_WITHOUT_LAUNCHER, false)) {
+            R.id.launcherFragment
+        } else {
+            R.id.nav_graph_login
+        }
+
+        navGraph.setStartDestination(startDest)
         navController.graph = navGraph
     }
 }
