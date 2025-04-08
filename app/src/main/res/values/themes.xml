@@ -61,6 +61,31 @@
         <item name="contentInsetStart">0dp</item>
     </style>
 
+    <style name="baseBtn" parent="Widget.AppCompat.Button">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="defaultBtn" parent="baseBtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:textAppearance">@style/defaultBtnText</item>
+        <item name="android:background">@drawable/selector_btn_round_a</item>
+    </style>
+
+    <style name="defaultBtn2" parent="defaultBtn">
+        <item name="android:background">@drawable/selector_btn_round_b</item>
+        <item name="android:textAppearance">@style/defaultBtnText2</item>
+    </style>
+
+    <style name="defaultBtnText" parent="baseText">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/selector_btn_a_text</item>
+    </style>
+
+    <style name="defaultBtnText2" parent="defaultBtnText">
+        <item name="android:textColor">@color/dark_blue_grey</item>
+    </style>
+
 
 
 </resources>
