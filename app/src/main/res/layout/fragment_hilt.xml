@@ -22,15 +22,10 @@
                 android:orientation="vertical"
                 android:paddingBottom="52dp">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_hilt"
-                    style="@style/defaultBtn2"
-                    android:text="hilt" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="home fragment" />
+                    android:text="hilt fragment" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
