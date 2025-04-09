@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 import javax.inject.Qualifier
 
@@ -61,7 +62,7 @@ class HiltModuleInjectATypeClass @Inject constructor(
 
 // Hilt Module 정의
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(SingletonComponent::class)
 object HiltProvideModule {
 
     // Qualifier 어노테이션 정의: 동일한 타입의 의존성을 구분할 때 사용
