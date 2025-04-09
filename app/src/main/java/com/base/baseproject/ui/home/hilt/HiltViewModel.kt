@@ -3,8 +3,8 @@ package com.base.baseproject.ui.home.hilt
 import android.content.Intent
 import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectATypeClass
 import com.base.baseproject.ui.home.hilt.sample.HiltFiledInject
-import com.base.baseproject.ui.home.hilt.sample.TestInterface
-import com.base.baseproject.ui.home.hilt.sample.TestModule
+import com.base.baseproject.ui.home.hilt.sample.HiltModuleProvideInterface
+import com.base.baseproject.ui.home.hilt.sample.HiltProvideModule
 import com.base.module.base.BaseViewModel
 import com.base.module.base.constants.BaseConstants
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,13 +15,13 @@ import javax.inject.Inject
 class HiltViewModel @Inject constructor(
     private val hiltFiledInject: HiltFiledInject,
     private val hiltConstructorInjectATypeClass: HiltConstructorInjectATypeClass,
-    @TestModule.TestInterface2  private val testInterface2: TestInterface,
+    @HiltProvideModule.HiltModuleInterface2  private val hiltModuleProvideInterface2: HiltModuleProvideInterface,
 ) : BaseViewModel() {
 
     fun test() {
         hiltFiledInject.showTestLog()
         hiltConstructorInjectATypeClass.showTestLog()
-        testInterface2.showString()
+        hiltModuleProvideInterface2.showString()
     }
 
     override fun getIntentExtraNext(intent: Intent): Intent {
