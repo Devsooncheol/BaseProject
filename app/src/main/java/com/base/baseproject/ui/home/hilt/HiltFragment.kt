@@ -8,6 +8,7 @@ import com.base.baseproject.databinding.FragmentHiltBinding
 import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectATypeClass
 import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectBTypeClass
 import com.base.baseproject.ui.home.hilt.sample.HiltFiledInject
+import com.base.baseproject.ui.home.hilt.sample.HiltModuleBindInterface
 import com.base.baseproject.ui.home.hilt.sample.HiltModuleInjectATypeClass
 import com.base.module.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,9 +24,11 @@ class HiltFragment : BaseFragment() {
 
     @Inject lateinit var hiltConstructorInjectATypeClass: HiltConstructorInjectATypeClass
 
-    @Inject lateinit var HiltConstructorInjectBTypeClass: HiltConstructorInjectBTypeClass
+    @Inject lateinit var hiltConstructorInjectBTypeClass: HiltConstructorInjectBTypeClass
 
     @Inject lateinit var hiltModuleInjectATypeClass: HiltModuleInjectATypeClass
+
+    @Inject lateinit var hiltModuleBindInterface: HiltModuleBindInterface
 
 
     override fun getViewBinding(): ViewBinding {
@@ -38,10 +41,13 @@ class HiltFragment : BaseFragment() {
         hiltFiledInject.showTestLog()
 
         hiltConstructorInjectATypeClass.showTestLog()
-        HiltConstructorInjectBTypeClass.showTestLog()
+        hiltConstructorInjectBTypeClass.showTestLog()
 
         Timber.i(hiltModuleInjectATypeClass.showTestLog())
         Timber.i(hiltModuleInjectATypeClass.showTestLog2())
+        Timber.i(hiltModuleBindInterface.showString())
+
+        viewModel.test()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
