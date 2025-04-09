@@ -16,9 +16,11 @@ import com.base.module.base.BaseActivity
 import com.base.module.base.scenario.BaseScenario
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<MainViewModel>() {
     private var _binding: ActivityMainBinding? = null
     val binding get() = _binding!!
