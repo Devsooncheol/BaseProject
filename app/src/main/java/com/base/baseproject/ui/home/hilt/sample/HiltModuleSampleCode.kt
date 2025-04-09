@@ -1,10 +1,9 @@
-package com.base.baseproject.ui.home.hilt
+package com.base.baseproject.ui.home.hilt.sample
 
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
-import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Qualifier
 

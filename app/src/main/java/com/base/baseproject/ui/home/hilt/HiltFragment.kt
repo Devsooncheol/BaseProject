@@ -5,6 +5,10 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.viewbinding.ViewBinding
 import com.base.baseproject.databinding.FragmentHiltBinding
+import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectATypeClass
+import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectBTypeClass
+import com.base.baseproject.ui.home.hilt.sample.HiltFiledInject
+import com.base.baseproject.ui.home.hilt.sample.HiltModuleInjectATypeClass
 import com.base.module.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber

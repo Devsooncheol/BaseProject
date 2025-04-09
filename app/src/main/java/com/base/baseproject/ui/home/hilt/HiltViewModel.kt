@@ -1,10 +1,13 @@
 package com.base.baseproject.ui.home.hilt
 
 import android.content.Intent
+import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectATypeClass
+import com.base.baseproject.ui.home.hilt.sample.HiltFiledInject
+import com.base.baseproject.ui.home.hilt.sample.TestInterface
+import com.base.baseproject.ui.home.hilt.sample.TestModule
 import com.base.module.base.BaseViewModel
 import com.base.module.base.constants.BaseConstants
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.asSharedFlow
 import timber.log.Timber
 import javax.inject.Inject
 

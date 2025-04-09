@@ -1,4 +1,4 @@
-package com.base.baseproject.ui.home.hilt
+package com.base.baseproject.ui.home.hilt.sample
 
 
 /**
