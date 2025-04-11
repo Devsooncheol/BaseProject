@@ -12,12 +12,22 @@
         <action
             android:id="@+id/action_homeFragment_to_hiltFragment"
             app:destination="@id/hiltFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_eventFragment"
+            app:destination="@id/eventFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/hiltFragment"
         android:name="com.base.baseproject.ui.home.hilt.HiltFragment"
         android:label="HiltFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.base.baseproject.ui.home.event.EventFragment"
+        android:label="EventFragment">
     </fragment>
 
     <include app:graph="@navigation/nav_graph_settings" />

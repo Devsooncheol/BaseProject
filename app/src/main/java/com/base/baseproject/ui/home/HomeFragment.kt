@@ -27,6 +27,14 @@ class HomeFragment : BaseFragment() {
                     navControllerAction(HomeFragmentDirections.actionHomeFragmentToHiltFragment())
                 }
             })
+
+            btnEvent.setOnClickListener(object : OnOneClickListener() {
+                override fun onOneClick(v: View?) {
+                    navControllerAction(HomeFragmentDirections.actionHomeFragmentToEventFragment())
+                }
+            })
+
+
         }
     }
 
