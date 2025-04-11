@@ -28,6 +28,77 @@
         android:id="@+id/eventFragment"
         android:name="com.base.baseproject.ui.home.event.EventFragment"
         android:label="EventFragment">
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep1Fragment"
+            app:destination="@id/eventStep1Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep2Fragment"
+            app:destination="@id/eventStep2Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep3Fragment"
+            app:destination="@id/eventStep3Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep4Fragment"
+            app:destination="@id/eventStep4Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep5Fragment"
+            app:destination="@id/eventStep5Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep6Fragment"
+            app:destination="@id/eventStep6Fragment" />
+
+        <action
+            android:id="@+id/action_eventFragment_to_eventStep7Fragment"
+            app:destination="@id/eventStep7Fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep1Fragment"
+        android:name="com.base.baseproject.ui.home.event.step1.EventStep1Fragment"
+        android:label="EventStep1Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep2Fragment"
+        android:name="com.base.baseproject.ui.home.event.step2.EventStep2Fragment"
+        android:label="EventStep2Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep3Fragment"
+        android:name="com.base.baseproject.ui.home.event.step3.EventStep3Fragment"
+        android:label="EventStep3Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep4Fragment"
+        android:name="com.base.baseproject.ui.home.event.step4.EventStep4Fragment"
+        android:label="EventStep4Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep5Fragment"
+        android:name="com.base.baseproject.ui.home.event.step5.EventStep5Fragment"
+        android:label="EventStep5Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep6Fragment"
+        android:name="com.base.baseproject.ui.home.event.step6.EventStep6Fragment"
+        android:label="EventStep6Fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventStep7Fragment"
+        android:name="com.base.baseproject.ui.home.event.step7.EventStep7Fragment"
+        android:label="EventStep7Fragment">
     </fragment>
 
     <include app:graph="@navigation/nav_graph_settings" />

@@ -22,10 +22,40 @@
                 android:orientation="vertical"
                 android:paddingBottom="52dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="hilt fragment" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type1"
+                    style="@style/defaultBtn2"
+                    android:text="eventType1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type2"
+                    style="@style/defaultBtn2"
+                    android:text="eventType2" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type3"
+                    style="@style/defaultBtn2"
+                    android:text="eventType3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type4"
+                    style="@style/defaultBtn2"
+                    android:text="eventType4" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type5"
+                    style="@style/defaultBtn2"
+                    android:text="eventType5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type6"
+                    style="@style/defaultBtn2"
+                    android:text="eventType6" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_event_type7"
+                    style="@style/defaultBtn2"
+                    android:text="eventType7" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
