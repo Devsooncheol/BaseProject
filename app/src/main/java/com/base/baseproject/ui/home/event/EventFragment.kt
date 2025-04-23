@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
+import com.base.baseproject.R
 import com.base.baseproject.databinding.FragmentEventBinding
 import com.base.baseproject.ui.home.hilt.HiltViewModel
 import com.base.module.base.BaseFragment
@@ -16,7 +18,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class EventFragment : BaseFragment() {
 
-    override val viewModel: HiltViewModel by viewModels()
+    //override val viewModel: EventViewModel by viewModels()
+    override val viewModel by hiltNavGraphViewModels<EventViewModel>(R.id.nav_graph_main)
 
     override fun getViewBinding(): ViewBinding {
         return FragmentEventBinding.inflate(layoutInflater)

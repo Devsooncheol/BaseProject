@@ -1,11 +1,8 @@
 package com.base.baseproject.ui.home.event
 
 import android.content.Intent
-import com.base.baseproject.ui.home.hilt.sample.HiltConstructorInjectATypeClass
-import com.base.baseproject.ui.home.hilt.sample.HiltFiledInject
-import com.base.baseproject.ui.home.hilt.sample.HiltModuleBindInterface
-import com.base.baseproject.ui.home.hilt.sample.HiltModuleProvideInterface
-import com.base.baseproject.ui.home.hilt.sample.HiltProvideModule
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.base.module.base.BaseViewModel
 import com.base.module.base.constants.BaseConstants
 import dagger.hilt.android.lifecycle.HiltViewModel

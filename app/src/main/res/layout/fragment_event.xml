@@ -25,7 +25,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_event_type1"
                     style="@style/defaultBtn2"
-                    android:text="eventType1" />
+                    android:text="LiveData" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_event_type2"

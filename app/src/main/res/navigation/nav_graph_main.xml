@@ -61,7 +61,7 @@
 
     <fragment
         android:id="@+id/eventStep1Fragment"
-        android:name="com.base.baseproject.ui.home.event.step1.EventStep1Fragment"
+        android:name="com.base.baseproject.ui.home.event.step1.LiveDataFragment"
         android:label="EventStep1Fragment">
     </fragment>
 

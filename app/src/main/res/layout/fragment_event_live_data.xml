@@ -22,7 +22,32 @@
                 android:orientation="vertical"
                 android:paddingBottom="52dp">
 
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click"
+                    style="@style/defaultBtn2"
+                    android:text="increment + mainThread + setValue" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click2"
+                    style="@style/defaultBtn2"
+                    android:text="increment + IOThread + setValue = crash" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click3"
+                    style="@style/defaultBtn2"
+                    android:text="increment + mainThread + postValue" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click4"
+                    style="@style/defaultBtn2"
+                    android:text="increment + IOThread + postValue" />
+
+
+
                 <TextView
+                    android:id="@+id/txt_number"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="event step 1" />
