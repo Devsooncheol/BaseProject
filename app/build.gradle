@@ -79,4 +79,11 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.51.1"
     implementation "androidx.hilt:hilt-navigation-fragment:$rootProject.hilt_navigation_version"
 
+    // Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Kotlin Coroutines (DataStore는 코루틴 기반)
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+
+
 }
