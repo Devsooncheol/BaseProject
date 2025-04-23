@@ -34,7 +34,11 @@ class HomeFragment : BaseFragment() {
                 }
             })
 
-
+            btnDataStore.setOnClickListener(object : OnOneClickListener() {
+                override fun onOneClick(v: View?) {
+                    navControllerAction(HomeFragmentDirections.actionHomeFragmentToDataStoreFragment())
+                }
+            })
         }
     }
 

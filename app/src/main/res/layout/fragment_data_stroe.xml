@@ -22,27 +22,7 @@
                 android:orientation="vertical"
                 android:paddingBottom="52dp">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_hilt"
-                    style="@style/defaultBtn2"
-                    android:text="hilt" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/btn_event"
-                    style="@style/defaultBtn2"
-                    android:text="event" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/btn_data_store"
-                    style="@style/defaultBtn2"
-                    android:text="DataStroe" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="home fragment" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>

@@ -16,12 +16,24 @@
         <action
             android:id="@+id/action_homeFragment_to_eventFragment"
             app:destination="@id/eventFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_dataStoreFragment"
+            app:destination="@id/dataStoreFragment" />
+
+
     </fragment>
 
     <fragment
         android:id="@+id/hiltFragment"
         android:name="com.base.baseproject.ui.home.hilt.HiltFragment"
         android:label="HiltFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataStoreFragment"
+        android:name="com.base.baseproject.ui.home.datastroe.DataStoreFragment"
+        android:label="DataStoreFragment">
     </fragment>
 
     <fragment
