@@ -22,16 +22,66 @@
                 android:orientation="vertical"
                 android:paddingBottom="52dp">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Preference DataStore" />
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:layout_marginTop="10dp"
                     android:id="@+id/btn_click"
                     style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
                     android:text="increase value" />
 
                 <TextView
                     android:id="@+id/txt_value"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click2"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto increase int" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click3"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto increase double" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click4"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto increase float" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click5"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto increase long" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click6"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto change boolean" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_click7"
+                    style="@style/defaultBtn2"
+                    android:layout_marginTop="10dp"
+                    android:text="proto recycle ascii str" />
+
+                <TextView
+                    android:id="@+id/txt_value2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
 
 
 
