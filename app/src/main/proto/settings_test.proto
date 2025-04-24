@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.base.baseproject";
+option java_multiple_files = true;
+
+// 성능 최적화를 위해 필드 이름 대신 짧은 숫자로 처리
+// 새로운 필드 추가는 가능하지만 기존 필드 번호는 절대 바꾸면 안 됨
+// 필드 번호는 절대 재사용 하지 말 것
+// proto3 버전에서는 값을 설정하지 않아도 null 대신 기본값으로 채워짐 (null safety)
+message SettingsTest {
+  int32 int_value = 1;         // Int 타입 (필드 고유번호 1)
+  double double_value = 2;     // 64-bit 실수
+  float float_value = 3;       // 32-bit 실수
+  int64 long_value = 4;        // Long 타입
+  bool is_flag = 5;            // Boolean 타입
+  string str_message = 6;      // String 타입
+}
