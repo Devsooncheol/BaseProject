@@ -1,10 +1,9 @@
 package com.base.baseproject.ui.home.datastroe
 
 import android.content.Intent
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.base.baseproject.SettingsTest
+import com.base.baseproject.ui.home.datastroe.preference.repository.PreferenceDataStoreRepository
 import com.base.baseproject.ui.home.datastroe.proto.repository.ProtoDataStoreRepository
 import com.base.module.base.BaseViewModel
 import com.base.module.base.constants.BaseConstants
@@ -16,16 +15,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DataStoreViewModel @Inject constructor(
-    private val dataStorePreference: DataStorePreference,
+    private val preferenceRepository: PreferenceDataStoreRepository,
     private val protoDataStoreRepository: ProtoDataStoreRepository,
 ) : BaseViewModel() {
-    val testValueFlow: Flow<Int> = dataStorePreference.testValueFlow
+    val testValueFlow: Flow<Int> = preferenceRepository.testValueFlow
 
     val settingsFlow: Flow<SettingsTest> = protoDataStoreRepository.settingsFlow
 
     fun incrementTestValue() {
         viewModelScope.launch {
-            dataStorePreference.incrementTestValue()
+            preferenceRepository.incrementTestValue()
         }
      }
 

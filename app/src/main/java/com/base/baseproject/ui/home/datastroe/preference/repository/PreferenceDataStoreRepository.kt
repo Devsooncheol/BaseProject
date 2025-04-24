@@ -1,4 +1,4 @@
-package com.base.baseproject.ui.home.datastroe
+package com.base.baseproject.ui.home.datastroe.preference.repository
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -39,7 +39,7 @@ import javax.inject.Inject
  * - `testValueFlow`: `DataStore`에서 `testValue` 값을 비동기적으로 읽는 `Flow<Int>`입니다.
  * - `incrementTestValue()`: `testValue` 값을 읽고 1을 증가시킨 후 저장합니다.
  */
-class DataStorePreference @Inject constructor(
+class PreferenceDataStoreRepository @Inject constructor(
     private val dataStore: DataStore<Preferences>
 ) {
     companion object{
