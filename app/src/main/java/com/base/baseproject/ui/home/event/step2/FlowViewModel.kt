@@ -19,6 +19,8 @@ import javax.inject.Inject
  *  - Flow는 collect되기 전까지는 아무 일도 일어나지 않음 (lazy)
  *  - 데이터 생산이 구독 이후 시작됨 → 항상 새로운 데이터를 발행할 수 있음
  *  - 예: flow {...}, flowOf(...), .asFlow() 등
+ *  - Flow는 "Cold Stream"이기 때문에 구독이 시작될 때 비로소 데이터를 생산하며,이로 인해 각 `collect`는 독립적으로 동작
+ *  - 동기적으로 값을 얻는 value 형태는 사용 불가
  *
  * 2. UpStream
  *  - 데이터를 발행(emit)하는 쪽
@@ -49,7 +51,7 @@ import javax.inject.Inject
  *  - buffer: 비동기 처리 시 성능 향상을 위한 버퍼링
  *  - conflate: 가장 최신 값만 유지 (중간 값 drop)
  *  - collectLatest: 가장 최신 emit만 처리, 이전 값 처리 중이면 취소됨
- *  
+ *
  * */
 
 @HiltViewModel

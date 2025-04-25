@@ -30,7 +30,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_event_type2"
                     style="@style/defaultBtn2"
-                    android:text="eventType2" />
+                    android:text="flow" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_event_type3"
