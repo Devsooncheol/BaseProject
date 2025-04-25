@@ -29,8 +29,8 @@ class EventFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (binding as FragmentEventBinding).apply {
-            btnClick(btnEventType1){ EventFragmentDirections.actionEventFragmentToEventStep1Fragment() }
-            btnClick(btnEventType2){ EventFragmentDirections.actionEventFragmentToEventStep2Fragment() }
+            btnClick(btnEventType1){ EventFragmentDirections.actionEventFragmentToLiveDataFragment() }
+            btnClick(btnEventType2){ EventFragmentDirections.actionEventFragmentToFlowFragment() }
             btnClick(btnEventType3){ EventFragmentDirections.actionEventFragmentToEventStep3Fragment() }
             btnClick(btnEventType4){ EventFragmentDirections.actionEventFragmentToEventStep4Fragment() }
             btnClick(btnEventType5){ EventFragmentDirections.actionEventFragmentToEventStep5Fragment() }

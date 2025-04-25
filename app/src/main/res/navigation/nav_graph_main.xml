@@ -42,12 +42,12 @@
         android:label="EventFragment">
 
         <action
-            android:id="@+id/action_eventFragment_to_eventStep1Fragment"
-            app:destination="@id/eventStep1Fragment" />
+            android:id="@+id/action_eventFragment_to_liveDataFragment"
+            app:destination="@id/liveDataFragment" />
 
         <action
-            android:id="@+id/action_eventFragment_to_eventStep2Fragment"
-            app:destination="@id/eventStep2Fragment" />
+            android:id="@+id/action_eventFragment_to_flowFragment"
+            app:destination="@id/flowFragment" />
 
         <action
             android:id="@+id/action_eventFragment_to_eventStep3Fragment"
@@ -72,15 +72,15 @@
     </fragment>
 
     <fragment
-        android:id="@+id/eventStep1Fragment"
+        android:id="@+id/liveDataFragment"
         android:name="com.base.baseproject.ui.home.event.step1.LiveDataFragment"
-        android:label="EventStep1Fragment">
+        android:label="LiveDataFragment">
     </fragment>
 
     <fragment
-        android:id="@+id/eventStep2Fragment"
-        android:name="com.base.baseproject.ui.home.event.step2.EventStep2Fragment"
-        android:label="EventStep2Fragment">
+        android:id="@+id/flowFragment"
+        android:name="com.base.baseproject.ui.home.event.step2.FlowFragment"
+        android:label="FlowFragment">
     </fragment>
 
     <fragment

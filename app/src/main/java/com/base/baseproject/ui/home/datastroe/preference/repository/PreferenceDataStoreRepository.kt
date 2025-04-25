@@ -5,6 +5,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -45,6 +46,11 @@ class PreferenceDataStoreRepository @Inject constructor(
     companion object{
         private val TEST_VALUE = intPreferencesKey("testValue")
     }
+
+    suspend fun getTestValue(): Int {
+        return dataStore.data.first()[TEST_VALUE] ?: 0
+    }
+
 
     val testValueFlow: Flow<Int> = dataStore.data
         .map { preferences -> preferences[TEST_VALUE] ?: 0 }
