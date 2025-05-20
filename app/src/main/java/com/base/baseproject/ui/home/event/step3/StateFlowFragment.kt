@@ -7,22 +7,19 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
-import com.base.baseproject.databinding.FragmentEventFlowBinding
-import com.base.baseproject.databinding.FragmentEventStep3Binding
-import com.base.baseproject.ui.home.HomeFragmentDirections
+import com.base.baseproject.databinding.FragmentEventStateFlowBinding
 import com.base.module.base.BaseFragment
 import com.base.module.base.listener.OnOneClickListener
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
 @AndroidEntryPoint
-class EventStep3Fragment : BaseFragment() {
-    override val viewModel: EventStep3ViewModel by viewModels()
+class StateFlowFragment : BaseFragment() {
+    override val viewModel: StateFlowViewModel by viewModels()
 
     override fun getViewBinding(): ViewBinding {
-        return FragmentEventStep3Binding.inflate(layoutInflater)
+        return FragmentEventStateFlowBinding.inflate(layoutInflater)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,7 +27,7 @@ class EventStep3Fragment : BaseFragment() {
 
         viewModel.testSelectStateFlow()
 
-        (binding as FragmentEventStep3Binding).apply {
+        (binding as FragmentEventStateFlowBinding).apply {
 
             lifecycleScope.launch {
                 repeatOnLifecycle(Lifecycle.State.STARTED) {

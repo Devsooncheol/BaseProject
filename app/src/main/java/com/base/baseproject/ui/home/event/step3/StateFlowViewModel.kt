@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -45,7 +44,7 @@ import javax.inject.Inject
  *
  */
 @HiltViewModel
-class EventStep3ViewModel @Inject constructor(
+class StateFlowViewModel @Inject constructor(
     private val testStateFlowRepository: TestStateFlowRepository
 ) : BaseViewModel() {
 

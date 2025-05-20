@@ -50,8 +50,8 @@
             app:destination="@id/flowFragment" />
 
         <action
-            android:id="@+id/action_eventFragment_to_eventStep3Fragment"
-            app:destination="@id/eventStep3Fragment" />
+            android:id="@+id/action_eventFragment_to_stateFlowFragment"
+            app:destination="@id/stateFlowFragment" />
 
         <action
             android:id="@+id/action_eventFragment_to_eventStep4Fragment"
@@ -84,9 +84,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/eventStep3Fragment"
-        android:name="com.base.baseproject.ui.home.event.step3.EventStep3Fragment"
-        android:label="EventStep3Fragment">
+        android:id="@+id/stateFlowFragment"
+        android:name="com.base.baseproject.ui.home.event.step3.StateFlowFragment"
+        android:label="StateFlowFragment">
     </fragment>
 
     <fragment

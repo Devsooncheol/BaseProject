@@ -31,7 +31,7 @@ class EventFragment : BaseFragment() {
         (binding as FragmentEventBinding).apply {
             btnClick(btnEventType1){ EventFragmentDirections.actionEventFragmentToLiveDataFragment() }
             btnClick(btnEventType2){ EventFragmentDirections.actionEventFragmentToFlowFragment() }
-            btnClick(btnEventType3){ EventFragmentDirections.actionEventFragmentToEventStep3Fragment() }
+            btnClick(btnEventType3){ EventFragmentDirections.actionEventFragmentToStateFlowFragment() }
             btnClick(btnEventType4){ EventFragmentDirections.actionEventFragmentToEventStep4Fragment() }
             btnClick(btnEventType5){ EventFragmentDirections.actionEventFragmentToEventStep5Fragment() }
             btnClick(btnEventType6){ EventFragmentDirections.actionEventFragmentToEventStep6Fragment() }
