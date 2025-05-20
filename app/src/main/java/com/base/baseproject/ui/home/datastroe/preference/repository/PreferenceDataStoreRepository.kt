@@ -1,9 +1,12 @@
 package com.base.baseproject.ui.home.datastroe.preference.repository
 
+import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.stringPreferencesKey
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -39,18 +42,29 @@ import javax.inject.Inject
  * 사용 방법:
  * - `testValueFlow`: `DataStore`에서 `testValue` 값을 비동기적으로 읽는 `Flow<Int>`입니다.
  * - `incrementTestValue()`: `testValue` 값을 읽고 1을 증가시킨 후 저장합니다.
+ *
+ * // 확인사항
+ *  - String만 암호화 처리 안되어있음
+ *  - 다른 데이터 타입은 암호화 되어있음
+ *  - file Explorer에서 확인 가능
+ *  - 마이그레이션 관련 알아볼것
+ *
  */
 class PreferenceDataStoreRepository @Inject constructor(
+    @ApplicationContext context: Context,
     private val dataStore: DataStore<Preferences>
 ) {
     companion object{
         private val TEST_VALUE = intPreferencesKey("testValue")
+        private val TEST_STRING_LIST_VALUE_KEY = stringPreferencesKey("string_list_key")
     }
 
+    /**
+     * Int Test
+     * */
     suspend fun getTestValue(): Int {
         return dataStore.data.first()[TEST_VALUE] ?: 0
     }
-
 
     val testValueFlow: Flow<Int> = dataStore.data
         .map { preferences -> preferences[TEST_VALUE] ?: 0 }
@@ -61,4 +75,62 @@ class PreferenceDataStoreRepository @Inject constructor(
             preferences[TEST_VALUE] = currentValue.plus(1)
         }
     }
+
+    /**
+     * List<String> Test
+     * */
+    suspend fun insertStrList(item: String) {
+        dataStore.edit { preferences ->
+            val currentList = preferences[TEST_STRING_LIST_VALUE_KEY]?.split(",")
+                ?.map { it.trim() }
+                ?.filter { it.isNotEmpty() }
+                ?.toMutableList() ?: mutableListOf()
+
+
+            if (item !in currentList) {
+                currentList.add(item)
+            }
+
+            preferences[TEST_STRING_LIST_VALUE_KEY] = if (currentList.isEmpty()) ""
+            else currentList.joinToString(",")
+        }
+    }
+
+    suspend fun deleteStrList(item: String) {
+        dataStore.edit { preferences ->
+            val currentList = preferences[TEST_STRING_LIST_VALUE_KEY]?.split(",")
+                ?.map { it.trim() }
+                ?.filter { it.isNotEmpty() }
+                ?.toMutableList() ?: mutableListOf()
+
+            currentList.remove(item)
+            preferences[TEST_STRING_LIST_VALUE_KEY] = if (currentList.isEmpty()) ""
+            else currentList.joinToString(",")
+        }
+    }
+
+    suspend fun updateStrList(oldItem: String, newItem: String) {
+        dataStore.edit { preferences ->
+            val currentList = preferences[TEST_STRING_LIST_VALUE_KEY]?.split(",")
+                ?.map { it.trim() }
+                ?.filter { it.isNotEmpty() }
+                ?.toMutableList() ?: mutableListOf()
+
+            val index = currentList.indexOf(oldItem)
+            if (index != -1) {
+                currentList[index] = newItem
+                preferences[TEST_STRING_LIST_VALUE_KEY] = if (currentList.isEmpty()) ""
+                else currentList.joinToString(",")
+            }
+        }
+    }
+
+    fun getStringListFlow(): Flow<List<String>> {
+        return dataStore.data
+            .map { preferences ->
+                val joined = preferences[TEST_STRING_LIST_VALUE_KEY] ?: ""
+                if (joined.isBlank()) emptyList() else joined.split(",")
+            }
+    }
+
 }
